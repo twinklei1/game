@@ -1,0 +1,262 @@
+@charset "utf-8";
+
+body{
+    background-color: #fcea9e;
+}
+#wrap{
+    width: 1100px;
+    margin: 0 auto;
+}
+::selection{color: #fff;background-color: #74c5b6;}
+/* header>h1{
+    height: 200px;
+    font-size: 50px;
+    line-height: 200px;
+    text-align: center;
+} */
+
+header{
+    width: 1100px;
+    height: 340px;
+    background-image: url(../images/header2.jpg);
+    margin-bottom: 50px;
+}
+header>h1{text-indent: -9999px;}
+
+section.page{
+    margin-bottom: 80px;
+}
+section.page>article{
+    width: 1100px;
+    margin: 0 auto;
+}
+section.page>article>h2{
+    width: 250px;
+    height: 65px;
+    margin: 20px auto;
+    color: #fff;
+    font-size: 48px;
+    font-weight: 500;
+    text-align: center;
+    text-shadow: 1px 1px 1px #999;
+    background-color: #74c5b5;
+    border-radius: 15px;
+}
+section.page>article>.txt{
+    width: 1100px;
+}
+
+/* 게임스토리 */
+section.page>.story>.txt{
+    display: flex;
+    align-items: center;
+    height: 940px;
+    background-image: url(../images/bg_story.png);
+    background-repeat: no-repeat;
+}
+section.page>.story>.txt>img{
+    display: block;
+    margin: 0 60px 0 120px;
+}
+section.page>.story>.txt>p>span{
+    display: block;
+    margin-bottom: 32px;
+    font-size: 30px;
+    text-align: center;
+}
+section.page>.story>.txt>p>.catchphrase{
+    font-size: 42px;
+}
+section.page>.story>.txt>p>.porori{
+    margin-bottom: 60px;
+}
+
+/* 게임방법 */
+section.page>.howto>.txt{
+    position: relative;
+    height: 550px;
+    background-image: url(../images/bg_howtoway.png);
+}
+section.page>.howto>.txt>p{
+    position: absolute;
+    left: 100px;
+    top: 16px;
+    width: 900px;
+    height: 438px;
+    font-size: 26px;
+    text-align: center;
+}
+section.page>.howto>.txt>p>span{
+    display: block;
+    margin-top: 45px;
+}
+section.page>.howto>.txt>p>.neoburi{
+    font-size: 42px;
+}
+
+/* 본게임 */
+.game{
+    overflow: hidden;
+    position: relative; /* 포로리의 기준점 */
+    width: 100%;
+    height: 778px;
+    background-image: url(../images/background.jpg);
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+
+.game>h2{
+    position: absolute;
+    left: 424px;
+    top: 40px;
+    color: #c7c7c7;
+    font-size: 30px;
+    text-align: center;
+}
+
+/* 포로리 가림판 */
+.game>.part{
+    position: absolute;
+    left: 0;
+    width: 150px;
+    height: 30px;
+    /* outline: 1px solid #f0f; */
+    z-index: 500;
+}
+
+.game>.part1{left: 74px;top: 390px;background-image: url(../images/bar01.png);}
+.game>.part2{left: 270px;top: 470px;background-image: url(../images/bar02.png);}
+.game>.part3{left: 635px;top: 390px;background-image: url(../images/bar02.png);}
+.game>.part4{left: 852px;top: 470px;background-image: url(../images/bar02.png);}
+.game>.part5{left: 74px;top: 629px;background-image: url(../images/bar03.png);}
+.game>.part6{left: 270px;top: 710px;background-image: url(../images/bar05.png);}
+.game>.part7{left: 635px;top: 629px;background-image: url(../images/bar04.png);}
+.game>.part8{left: 852px;top: 710px;background-image: url(../images/bar03.png);}
+
+.game>.frame{
+    /* display: none; */
+    position: absolute;
+    left: 99px;
+    top: 320px;
+    width: 100px;
+}
+
+.game>.ext-l{
+    position: absolute;
+    left: -200px;
+    top: 0;
+    z-index: 1000;
+}
+
+.game>.ext-r{
+    position: absolute;
+    right: -200px;
+    top: 0;
+    z-index: 1000;
+}
+
+.game>.frame>ul>li,
+.game>.ext-l>ul>li,
+.game>.ext-r>ul>li{
+    display: none;
+}
+
+.game>.frame>ul>li>img,
+.game>.ext-l>ul>li>img,
+.game>.ext-r>ul>li>img{
+    display: block;
+    width: 100%;
+}
+
+.game>button{
+    display: block;
+    position: absolute;
+    left: 354px;
+    top: 40px;
+    width: 125px;
+    height: 50px;
+    margin-top: -7px;
+    margin-left: -64.5px;
+    color: #c7c7c7;
+    font-family: "katuri";
+    font-size: 24px;
+    border: 1px solid #c7c7c7;
+    border-radius: 25px;
+    background: none;
+    outline: none;
+    box-shadow: 1px 3px 2px #2b2b2b;
+    transition: 0.2s all;
+    /* border: none; */
+}
+
+.game>button:hover{
+    color: #304e42;
+    background-color: #fff;
+}
+
+.game>button:active{
+    left: 355px;
+    top: 43px;
+    box-shadow: none;
+}
+
+.game>.score{
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    margin-left: -115px;
+    color: #fff;
+    font-size: 70px;
+    text-shadow: 1px 1px 1px #999;
+}
+
+.game>.ending{
+    display: none;
+    position: absolute;
+    left: 50%;
+    bottom: 240px;
+    width: 100px;
+    height: 90px;
+    margin-left: -50px;
+    background-image: url(../images/gameover.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 2000;
+}
+
+.game>.ending>.finalScore{
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    bottom: 120px;
+    height: 0;
+    margin-left: -115px;
+    color: #fff;
+    font-size: 70px;
+    text-shadow: 1px 1px 1px #999;
+}
+
+footer:before{
+    display: block;
+    width: 160px;
+    height: 110px;
+    margin: 95px auto 20px;
+    background-image: url(../images/img_bottom.png);
+    content: '';
+}
+
+footer{
+    height: 280px;
+    font-size: 14px;
+    font-family: "Noto Sans KR";
+}
+footer>span{
+    display: block;
+    margin-bottom: 14px;
+    text-align: center;
+}
+footer>address{
+    text-align: center;
+}
